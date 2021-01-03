@@ -4,7 +4,66 @@
 
     @{
         //TODO #1: Use a loop to display job results in a table.
-    }
+        foreach (var job in ViewBag.jobs)
+        {
+        <table class="job-listing">
+                <tr>
+                    <td>
+                        ID
+                    </td>
+                    <td>
+                       @job.Id
+                    </td>
+                </tr>
 
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        @job.Name
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Employer
+                    </td>
+                    <td>
+                        @job.Employer.Value
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Location
+                    </td>
+                    <td>
+                        @job.Location.Value
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Position Type
+                    </td>
+                    <td>
+                        @job.PositionType.Value
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Skill
+                    </td>
+                    <td>
+                        @job.CoreCompetency.Value
+                    </td>
+                </tr>
+
+          
+        </table>
+        }
+    }
 
 </div>
